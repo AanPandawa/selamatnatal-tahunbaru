@@ -11,6 +11,7 @@
             padding: 0;
             background: linear-gradient(to bottom, #ffefba, #ffffff);
             color: #333;
+            font-size: 16px; /* Ukuran font default */
         }
         header {
             background: #f44336;
@@ -19,7 +20,7 @@
             text-align: center;
         }
         header h1 {
-            font-size: 3em;
+            font-size: 3em; /* Ukuran header */
             margin: 0;
             animation: dropText 3s infinite;
         }
@@ -127,60 +128,54 @@
             margin: 5px 0;
         }
 
-        /* Media Query for Small Screens */
-        @media only screen and (max-width: 600px) {
+        /* Media Query untuk perangkat mobile */
+        @media screen and (max-width: 600px) {
             body {
-                font-size: 14px; /* Smaller font size for mobile */
+                font-size: 14px; /* Ukuran font lebih kecil di ponsel */
             }
-
             header h1 {
-                font-size: 2.5em; /* Smaller header on mobile */
+                font-size: 2.5em; /* Ukuran header lebih kecil di ponsel */
             }
-
             main h1 {
-                font-size: 2.2em; /* Smaller main title */
+                font-size: 2.5em; /* Ukuran teks utama lebih kecil */
             }
-
-            .gallery img {
-                max-width: 100%;
-                height: auto;
-            }
-
             main p {
-                font-size: 1.2em; /* Adjust paragraph text */
+                font-size: 1.2em; /* Ukuran paragraf lebih kecil */
             }
-
-            footer img {
-                width: 80px; /* Smaller footer image */
+            .gallery img {
+                width: 90%; /* Memperbesar gambar di ponsel */
+            }
+            footer p {
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Audio Player -->
-    <audio autoplay loop>
-        <source src="mary_christmas.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- Header -->
+    <!-- Menambahkan audio dengan kontrol putar manual -->
     <header>
         <h1>Selamat Natal dan Tahun Baru 2025</h1>
     </header>
 
-    <!-- Main Content -->
     <main>
         <h1>Semoga Natal Membawa Kedamaian, dan Tahun Baru Membawa Harapan Baru</h1>
         <p>Dengan kerendahan hati, saya mengucapkan Selamat Natal bagi teman-teman yang merayakan, semoga kedamaian dan kasih sayang-Nya selalu menyertai kita semua. Selamat Tahun Baru 2025, semoga setiap langkah kita di tahun yang baru dipenuhi dengan harapan dan kebahagiaan.</p>
 
+        <!-- Menambahkan tombol untuk memutar lagu secara manual -->
+        <div>
+            <audio controls>
+                <source src="mary_christmas.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
         <h2>Galeri Natal</h2>
         <div class="gallery">
             <img src="selamat-natal.jpeg" alt="Foto Natal">
-            <div class="tree"></div>
+            <div class="tree"></div> <!-- Pohon Natal bergerak -->
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <img src="foto-aan.jpg" alt="Foto Aan Saputra">
         <p>&copy; Copyright 2025 Aan Saputra, S.Kom</p>
